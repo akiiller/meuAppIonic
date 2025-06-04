@@ -7,7 +7,8 @@ import { Directive, ElementRef, HostListener, Input, Renderer2 } from '@angular/
 export class HighlightDirective {
   @Input() appHighlight: string = 'yellow'; // Cor padrão
   @Input() defaultColor: string = '';    // Cor original
-constructor(private el: ElementRef, private renderer: Renderer2) { }
+  
+  constructor(private el: ElementRef, private renderer: Renderer2) { }
 
   @HostListener('mouseenter') onMouseEnter() {
     this.highlight(this.appHighlight || this.defaultColor || 'yellow');
