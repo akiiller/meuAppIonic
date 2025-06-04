@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title appHighlight="lightyellow"> Sobre o App
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Sobre</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Informações do Projeto</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Este aplicativo foi desenvolvido para a disciplina XPTO.</p>
+      <p>Integrantes do Grupo:</p>
+      <ul>
+        <li>Nome do Integrante 1</li>
+        <li>Nome do Integrante 2</li>
+        <li>Nome do Integrante 3</li>
+        </ul>
+      <p>Data de hoje: {{ today | date:'fullDate' }}</p> <div *ngIf="true" style="margin-top: 10px; padding: 5px; background-color: #e0e0e0;">
+        Esta seção é sempre exibida por causa do *ngIf="true".
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button expand="block" routerLink="/home" class="ion-margin-top">
+    Voltar para Home
+  </ion-button>
+</ion-content>
