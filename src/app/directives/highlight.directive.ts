@@ -2,7 +2,8 @@
 import { Directive, ElementRef, HostListener, Input, Renderer2 } from '@angular/core';
 
 @Directive({
-  selector: '[appHighlight]'
+  selector: '[appHighlight]',
+  standalone: false
 })
 export class HighlightDirective {
   @Input() appHighlight: string = 'yellow'; // Cor padrão
