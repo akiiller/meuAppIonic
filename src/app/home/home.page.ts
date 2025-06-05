@@ -1,9 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService, Product } from '../services/api.service'; // Importe o serviço e a interface
 import { LoadingController } from '@ionic/angular'; // Para feedback de carregamento
+import { TruncatePipe } from '../pipes/truncate.pipe'; // <<--- IMPORTAR AQUI
+
+
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-home',  
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
   standalone: false

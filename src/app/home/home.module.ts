@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
+import { TruncatePipe } from '../pipes/truncate.pipe'; // <--- IMPORTAR AQUI (ajuste o caminho se necessário)
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { HomePageRoutingModule } from './home-routing.module';
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage]
+  declarations: [ HomePage,
+    TruncatePipe]
 })
 export class HomePageModule {}
